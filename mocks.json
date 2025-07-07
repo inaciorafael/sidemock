@@ -1,0 +1,6 @@
+{
+  "GET /api/example/users/:id/profile": {
+    "delay": 2000,
+    "data": { "id": 1, "name": "João", "status": "OK!" }
+  }
+}
