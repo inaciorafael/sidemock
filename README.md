@@ -21,6 +21,7 @@ Você pode clonar este repositório e instalar as dependências localmente:
 git clone https://github.com/seu-usuario/sidemock.git
 cd sidemock
 npm install
+npm run build
 ```
 
 ---
@@ -30,7 +31,7 @@ npm install
 Execute o servidor com:
 
 ```bash
-node src/index.js
+./bin/sidemock -b https://example.api.com
 ```
 
 Por padrão, o servidor roda em `http://localhost:5000` e redireciona requisições para o backend definido através do parametro obrigatório (ex: `-b, --backend <backend-url>`).
@@ -55,6 +56,13 @@ Os mocks são definidos em um arquivo `mocks.json` na raiz do projeto. A chave �
     { "id": 2, "name": "Ethan" }
   ],
   "POST /api/login": {
+    "dalay": 2000, // Aplica delay na resposta da requisição de 2seg.
+    "data": {
+      "token": "abc123",
+      "expires_in": 3600
+    }
+  },
+  "GET /api/users/:id/profile": { // :id espera um dado enviado via parametro.
     "token": "abc123",
     "expires_in": 3600
   }
@@ -78,7 +86,6 @@ Os mocks são definidos em um arquivo `mocks.json` na raiz do projeto. A chave �
 
 Funcionalidades planejadas:
 
-* ✅ Suporte a delays por endpoint
 * ⏺ Gravação automática de respostas reais como mocks (`--record`)
 * 🌐 Dashboard web para visualizar e editar mocks
 * 📆 Suporte a múltiplos arquivos de mocks (por endpoint)
@@ -103,9 +110,3 @@ npm run dev
 * Node.js 18+
 * npm ou yarn
 * (Opcional) `ts-node` e `nodemon` para desenvolvimento
-
----
-
-## 📄 Licença
-
-MIT © [Seu Nome ou Empresa](https://github.com/seu-usuario)
