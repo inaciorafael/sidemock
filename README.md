@@ -2,7 +2,7 @@
 
 **SideMock** é uma ferramenta de desenvolvimento frontend que atua como um servidor proxy local. Ela permite mockar respostas de APIs específicas e redirecionar todas as demais requisições para um backend real. Também é possível simular delays nas respostas, útil para testar comportamentos com latência.
 
-<img src="showcase/example.svg" />
+<img src="showcase/tree.svg" />
 
 ---
 
