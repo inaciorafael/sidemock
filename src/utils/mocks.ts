@@ -75,6 +75,15 @@ export function loadMocks(): void {
   })
 }
 
+export function saveMock(key: string, data: any): void {
+  MOCKS[key] = {
+    data
+  }
+  fs.writeFileSync(MOCKS_PATH, JSON.stringify(MOCKS, null, 2), 'utf-8')
+  console.log(`[RECORDED]: ${key}`)
+
+}
+
 export function showMockExample() {
   const { port } = getConfig()
   const mockExamplePath = 'GET /api/example/users/:id/profile'

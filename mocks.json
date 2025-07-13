@@ -1,6 +1,84 @@
 {
-  "GET /api/example/users/:id/profile": {
-    "delay": 2000,
-    "data": { "id": 1, "name": "João", "status": "OK!" }
+  "GET /projects": {
+    "data": [
+      {
+        "id": 3,
+        "name": "Ambiente de testes",
+        "createdAt": "2025-07-03T22:49:27.000+00:00",
+        "updatedAt": "2025-07-03T22:49:27.000+00:00"
+      },
+      {
+        "id": 2,
+        "name": "Development btk",
+        "createdAt": "2025-07-03T22:49:27.000+00:00",
+        "updatedAt": "2025-07-03T22:49:27.000+00:00"
+      },
+      {
+        "id": 1,
+        "name": "Bytekeep",
+        "createdAt": "2025-07-03T22:49:27.000+00:00",
+        "updatedAt": "2025-07-03T22:49:27.000+00:00"
+      }
+    ]
+  },
+  "GET /projects/1/notebooks": {
+    "data": [
+      {
+        "id": 1,
+        "name": "development",
+        "idProject": 1,
+        "createdAt": "2025-07-03T22:49:27.000+00:00",
+        "updatedAt": "2025-07-03T22:49:27.000+00:00"
+      },
+      {
+        "id": 2,
+        "name": "www",
+        "idProject": 1,
+        "createdAt": "2025-07-03T22:49:27.000+00:00",
+        "updatedAt": "2025-07-03T22:49:27.000+00:00"
+      }
+    ]
+  },
+  "GET /notebooks/1/notes": {
+    "data": [
+      {
+        "id": 1,
+        "title": "App tutorial",
+        "note": "<h1>😃 App tutorial de como criar um app</h1><blockquote><p>Texto informativo de como criar um app para seu código em <strong>React.js</strong>.</p><p>nasdaskdjak jalskdj aklsjd</p></blockquote>",
+        "idProject": 1,
+        "idNotebook": 1,
+        "createdAt": "2025-07-03T22:49:27.000+00:00",
+        "updatedAt": "2025-07-07T18:06:25.000+00:00"
+      },
+      {
+        "id": 2,
+        "title": "Bytekeep shortcuts",
+        "note": "<h1>Assuntos matématica de faculdade</h1><ul><li><p>Calculo diferencial integral</p></li></ul>",
+        "idProject": 1,
+        "idNotebook": 1,
+        "createdAt": "2025-07-03T22:49:27.000+00:00",
+        "updatedAt": "2025-07-04T04:26:19.000+00:00"
+      }
+    ]
+  },
+  "GET /notebooks/2/notes": {
+    "data": []
+  },
+  "GET /projects/2/notebooks": {
+    "data": [
+      {
+        "id": 3,
+        "name": "shortcuts",
+        "idProject": 2,
+        "createdAt": "2025-07-03T22:49:27.000+00:00",
+        "updatedAt": "2025-07-03T22:49:27.000+00:00"
+      }
+    ]
+  },
+  "GET /notebooks/3/notes": {
+    "data": []
+  },
+  "GET /projects/3/notebooks": {
+    "data": []
   }
 }

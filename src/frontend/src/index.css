@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: #242424;
+  background-color: white;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  padding: 0;
+  margin: 0;
+  min-width: 100wh;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 1.6em;
+}
+
+.app-container {
+  display: grid;
+  grid-template-rows: 100%;
+  grid-template-columns: 0.4fr auto;
+  grid-template-areas: 'log painel'
+}

@@ -1,9 +1,10 @@
 import axios, { AxiosRequestConfig } from 'axios'
 import { Request, Response } from 'express'
 import { getConfig } from '../config'
+import { saveMock } from '../utils/mocks'
 
 export async function proxyRequest(req: Request, res: Response) {
-  const { backendUrl } = getConfig()
+  const { backendUrl, record } = getConfig()
 
   const targetUrl = backendUrl + req.originalUrl
   console.log(`[PROXY] ${req.method} ${targetUrl}`)
@@ -21,6 +22,10 @@ export async function proxyRequest(req: Request, res: Response) {
     }
 
     const response = await axios(config)
+
+    if (record && response.status === 200 && response.data) {
+      saveMock(`${req.method} ${req.path}`, response.data)
+    }
 
     res.status(response.status)
 
