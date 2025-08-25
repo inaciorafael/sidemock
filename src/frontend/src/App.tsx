@@ -1,11 +1,12 @@
-import { Log, Painel, Actions } from './components'
+import { Panel, Sidebar, Header } from './components'
 
 function App() {
   return (
-    <div className="app-container">
-      <Log />
-      <Painel />
-    </div>
+    <main className="app-container">
+      <Header />
+      <Sidebar />
+      <Panel />
+    </main>
   )
 }
 

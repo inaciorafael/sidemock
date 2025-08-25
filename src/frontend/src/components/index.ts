@@ -1,9 +1,11 @@
-import Log from './log'
-import Painel from './painel'
-import Actions from './actions'
+import Sidebar from './sidebar'
+import Panel from './panel'
+import Header from './header'
+import { Tabs } from './Tabs'
 
 export {
-  Log,
-  Painel,
-  Actions
+  Sidebar,
+  Panel,
+  Header,
+  Tabs
 }
