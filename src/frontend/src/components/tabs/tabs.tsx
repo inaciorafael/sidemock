@@ -4,7 +4,7 @@ import {
   createContext,
   useContext,
 } from "react";
-import type { TabsProps, TabsContextType } from "./Tabs.types";
+import type { TabsProps, TabsContextType } from "./tabs.types";
 
 const TabsContext = createContext<TabsContextType | undefined>(undefined);
 

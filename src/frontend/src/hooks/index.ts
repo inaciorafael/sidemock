@@ -1,4 +1,4 @@
-import { useTabs } from '../components/Tabs'
+import { useTabs } from '../components/tabs'
 
 export {
   useTabs

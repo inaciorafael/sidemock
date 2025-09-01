@@ -1,5 +1,5 @@
-import type { TabsTriggerProps } from "./Tabs.types";
-import { useTabsContext } from "./Tabs";
+import type { TabsTriggerProps } from "./tabs.types";
+import { useTabsContext } from "./tabs";
 
 export function TabsTrigger({ value, children }: TabsTriggerProps) {
   const { value: active, setValue } = useTabsContext();

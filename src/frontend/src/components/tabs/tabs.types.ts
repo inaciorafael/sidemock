@@ -1,4 +1,7 @@
 import type { ReactNode } from "react";
+import type { InjectedProp } from "../../utils/types";
+
+export interface TabContentInjectedProps extends InjectedProp<'tabGroupId', string> {}
 
 export type TabsContextType = {
   id: string;
@@ -7,9 +10,9 @@ export type TabsContextType = {
 };
 
 export type TabsProps = {
-  id: string; // id único do grupo
-  value?: string; // modo controlado
-  defaultValue?: string; // modo não-controlado
+  id: string;
+  value?: string;
+  defaultValue?: string;
   onChange?: (val: string) => void;
   children: ReactNode;
 };

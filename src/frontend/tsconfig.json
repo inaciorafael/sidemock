@@ -1,4 +1,8 @@
 {
+  "swcMinify": true,
+  "compiler": {
+    "erasableSyntaxOnly": false
+  },
   "files": [],
   "references": [
     { "path": "./tsconfig.app.json" },

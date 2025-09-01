@@ -1,7 +1,7 @@
-import { Tabs as TabsRoot, useTabsContext } from "./Tabs";
-import { TabsList } from "./TabsList";
-import { TabsTrigger } from "./TabsTrigger";
-import { TabsContent } from "./TabsContent";
+import { Tabs as TabsRoot, useTabsContext } from "./tabs";
+import { TabsList } from "./tabs-list";
+import { TabsTrigger } from "./tabs-trigger";
+import { TabsContent } from "./tabs-content";
 
 type TabsComponent = typeof TabsRoot & {
   List: typeof TabsList;

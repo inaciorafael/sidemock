@@ -1,14 +1,14 @@
-import type { TabsContentProps } from "./Tabs.types";
-import { useTabsContext } from "./Tabs";
+import type { TabsContentProps } from "./tabs.types";
+import { useTabsContext } from "./tabs";
 import React, { type ReactElement } from "react";
 
 export function TabsContent({ value, children }: TabsContentProps) {
-  const { value: active, id: parentId } = useTabsContext();
+  const { value: active, id: tabGroupId } = useTabsContext();
   const isActive = active === value;
 
   const childrenWithProps = React.Children.map(children, (child) => {
     if (React.isValidElement(child)) {
-      return React.cloneElement(child as ReactElement<any>, { parentId });
+      return React.cloneElement(child as ReactElement<any>, { tabGroupId });
     }
     return child;
   });
